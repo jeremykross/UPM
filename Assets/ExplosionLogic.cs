@@ -7,9 +7,11 @@ public class ExplosionLogic : MonoBehaviour {
 	public TextMesh comboCounter;
 	public CircleCollider2D bounds;
 
+    public bool isAlive = true;
+
 	protected float startTime; 
 	protected float duration = 0.1f;
-	protected float startRadius = 3f;
+	protected float startRadius = 2.5f;
 	protected float endRadius = 0f;
 
 	public int ComboCount = 1;
@@ -40,5 +42,8 @@ public class ExplosionLogic : MonoBehaviour {
 		float ratio = elapsed/duration;
 
 		bounds.radius = startRadius + (endRadius - startRadius)*ratio;
+        if (bounds.radius < .001) {
+            isAlive = false;
+        }
 	}
 }

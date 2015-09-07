@@ -27,7 +27,7 @@ public class ShellSpawnLogic : MonoBehaviour
 	float howLongToWait ()
 	{
 		if(GlobalLogic.Preferences["DIFFICULTY"].Equals("INSANE")) {
-			return 0;
+			return .01f;
 		}
 
 		if (Time.time - startTime < 10) {
@@ -56,7 +56,7 @@ public class ShellSpawnLogic : MonoBehaviour
 	IEnumerator Spawn ()
 	{
 		while (running) {
-			Instantiate (shell, Camera.main.ViewportToWorldPoint (new Vector3 (0.5f + .25f * Random.value, 1.2f, 1f)), Quaternion.identity);
+			Instantiate (shell, Camera.main.ViewportToWorldPoint (new Vector3 (0.5f + .25f * Random.value, 1.1f, 1f)), Quaternion.identity);
 			yield return new WaitForSeconds (howLongToWait()); 
 		}
 	}
