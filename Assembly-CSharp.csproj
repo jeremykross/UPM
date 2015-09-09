@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{07E87903-A5F1-82CF-A1B8-C4326F242C91}</ProjectGuid>
+	<ProjectGuid>{5F5CB35E-01EE-648E-B16A-7C88D9F6887C}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CinemaTitleLogic.cs" />
      <Compile Include="Assets\ClassicMode.cs" />
      <Compile Include="Assets\ComboCounterLogic.cs" />
+     <Compile Include="Assets\Delay.cs" />
      <Compile Include="Assets\ExplosionLogic.cs" />
      <Compile Include="Assets\GlobalLogic.cs" />
      <Compile Include="Assets\GroundSetupScript.cs" />
@@ -150,7 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{0ADABACA-F5C0-EEFD-7CDF-F835E2F5A94E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{F3EAFA9A-4309-6DBC-1ECD-2BFDBC4821B7}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
